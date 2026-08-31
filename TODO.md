@@ -22,8 +22,8 @@ Tracking what's fixed vs. what's new to build. Move items to `[x]` once done, an
 
 - [x] "See Upcoming Events" button (Hero) should scroll/link to the current open event — for now, point it to "Hiring Open — 2nd & 3rd Year Students"
 - [x] Add a notification strip below the Navbar (highlighted color — red or a color matching the theme) showing the current upcoming event, e.g. "Hiring Open — 2nd & 3rd Year Students". Should stay visible/persistent until the event changes.
-- [ ] About Us: add a line about the club supporting and encouraging research
-- [ ] About Us: mention that the club also runs webinars and seminars, not just hackathons/workshops
+- [x] About Us: add a line about the club supporting and encouraging research
+- [x] About Us: mention that the club also runs webinars and seminars, not just hackathons/workshops
 - [ ] "See More Events" (Events section) should link to a **separate Events page**, not scroll within the homepage:
   - Own hero section with its own heading/subheading and CTA
   - Sub-sections for: Events, Workshops, Seminars, Webinars (3–4 categories)

@@ -9,12 +9,9 @@ This list is maintained by hand alongside the GitHub [contributors graph](https:
 - Darsh Vithlani ([@CODING-DARSH](https://github.com/CODING-DARSH)) — Tech Lead & maintainer
 
 ## Contributors
+- Krishnapriya ([@krishnapriya-op](https://github.com/krishnapriya-op))
+  - Added About Us copy on research support and webinars/seminars ([#5](https://github.com/CODING-DARSH/turing-webstie/pull/5))
 
-Listed by first contribution. PR numbers link the work.
-
-- Name ([@github-handle](https://github.com/github-handle))
-  - Short description of what was built/fixed ([#1](https://github.com/CODING-DARSH/turing-club/pull/1))
-  - Another contribution, if they've done more than one ([#4](https://github.com/CODING-DARSH/turing-club/pull/4))
 
 <!--
 Add new contributors below this line, following the format above.
