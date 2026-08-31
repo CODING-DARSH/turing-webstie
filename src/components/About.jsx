@@ -71,7 +71,7 @@ export default function About() {
               members.
             </p>
             
-            <p className="text-sm md:text-base text-text-muted leading-relaxed">
+            <p className="mt-6 text-sm md:text-base text-text-muted leading-relaxed">
               Beyond events, the Turing Club encourages members to pursue research — 
               supporting students who want to go deeper into a problem, publish their work,
               or contribute to ongoing projects. We also regularly host webinars and seminars
