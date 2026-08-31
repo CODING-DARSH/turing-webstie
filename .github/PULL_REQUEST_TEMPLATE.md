@@ -4,6 +4,7 @@
 
 ## Related Issue
 
+<!-- Every PR must link the issue it addresses. Open one first if it doesn't exist yet. -->
 Closes #
 
 ## Type of Change
@@ -20,6 +21,7 @@ Closes #
 
 ## Checklist
 
+- [ ] This PR is linked to an issue (see above)
 - [ ] I pulled the latest `main` and branched off it
 - [ ] `npm run build` passes locally with no errors
 - [ ] Tested on both desktop and mobile viewport
