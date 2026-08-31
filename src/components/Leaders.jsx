@@ -1,51 +1,66 @@
-const LEADERS = [
+import kashishImg from '../assets/images/leaders/kashish-jaiswal.jpg';
+import syedImg from '../assets/images/leaders/syed-zahid-saleem.jpg';
+import adyaImg from '../assets/images/leaders/adya-gupta.jpg';
+import darshImg from '../assets/images/leaders/darsh-vithlani.jpg';
+import laeeqaImg from '../assets/images/leaders/laeeqa-iffath-ur-raheman.jpg';
+import swapnilImg from '../assets/images/leaders/swapnil-ghosh.jpg';
+import veeraImg from '../assets/images/leaders/veera-srinivasa-rao-lachireddy.jpg';
+import rajeshwariImg from '../assets/images/leaders/ag-rajeshwari.jpg';
+import archanaImg from '../assets/images/leaders/archana-sasi.jpg';
+
+// core trio: featured just below the Faculty Advisor
+const CORE_LEADERS = [
   {
     name: 'Kashish Jaiswal',
     role: 'President',
     year: '3rd Year, AIML',
-    image: '/src/assets/images/leaders/kashish-jaiswal.jpg',
+    image: kashishImg,
   },
   {
     name: 'Syed Zahid Saleem',
     role: 'Vice President',
     year: '2nd Year, AIML',
-    image: '/src/assets/images/leaders/syed-zahid-saleem.jpg',
+    image: syedImg,
   },
   {
     name: 'Adya Gupta',
     role: 'Secretary',
     year: '2nd Year, AIML',
-    image: '/src/assets/images/leaders/adya-gupta.jpg',
+    image: adyaImg,
   },
+];
+
+// remaining leads: shown in the standard grid below
+const LEADS = [
   {
     name: 'Darsh Vithlani',
     role: 'Tech Lead',
     year: '3rd Year, AIML',
-    image: '/src/assets/images/leaders/darsh-vithlani.jpg',
+    image: darshImg,
   },
   {
     name: 'K Laeeqa Iffath Ur Raheman',
     role: 'Design Lead',
     year: '3rd Year, AIML',
-    image: '/src/assets/images/leaders/laeeqa-iffath-ur-raheman.jpg',
+    image: laeeqaImg,
   },
   {
     name: 'Swapnil Ghosh',
     role: 'Social Media Lead',
     year: '2nd Year, AIML',
-    image: '/src/assets/images/leaders/swapnil-ghosh.jpg',
+    image: swapnilImg,
   },
   {
     name: 'Veera Srinivasa Rao Lachireddy',
     role: 'Marketing Lead',
     year: '2nd Year, AIML',
-    image: '/src/assets/images/leaders/veera-srinivasa-rao-lachireddy.jpg',
+    image: veeraImg,
   },
   {
     name: 'A G Rajeshwari',
     role: 'Photography Lead',
     year: '2nd Year, AIML',
-    image: '/src/assets/images/leaders/ag-rajeshwari.jpg',
+    image: rajeshwariImg,
   },
 ];
 
@@ -53,7 +68,7 @@ const FACULTY_ADVISOR = {
   name: 'Dr. Archana Sasi',
   role: 'Faculty Advisor',
   subtitle: 'Assistant Professor, Department of CSE · PhD in CSE',
-  image: '/src/assets/images/leaders/archana-sasi.jpg',
+  image: archanaImg,
 };
 
 function SocialIcons() {
@@ -112,6 +127,35 @@ function LeaderCard({ name, role, year, image }) {
   );
 }
 
+// larger, highlighted card used for the core trio (President / VP / Secretary)
+function FeaturedLeaderCard({ name, role, year, image }) {
+  return (
+    <div className="group border border-primary-light/30 rounded-xl overflow-hidden bg-surface/80 hover:border-primary-light/60 transition-colors shadow-[0_0_30px_-12px_var(--color-primary-light)]">
+      <div className="relative aspect-[4/5] bg-surface overflow-hidden">
+        <img
+          src={image}
+          alt={name}
+          className="w-full h-full object-cover"
+        />
+        {/* designation on top of image */}
+        <div className="absolute top-0 left-0 right-0 px-4 py-3 bg-gradient-to-b from-black/90 via-black/50 to-transparent">
+          <span className="text-xs font-bold uppercase tracking-widest text-white drop-shadow-md">
+            {role}
+          </span>
+        </div>
+      </div>
+      <div className="p-5">
+        <div className="text-base font-semibold text-text leading-tight">{name}</div>
+        <div className="text-xs font-mono uppercase tracking-widest text-primary-light mt-2">
+          {role}
+        </div>
+        <div className="text-xs text-text-dim mt-1">{year}</div>
+        <SocialIcons />
+      </div>
+    </div>
+  );
+}
+
 export default function Leaders() {
   return (
     <section id="leaders" className="relative border-b border-border">
@@ -130,15 +174,8 @@ export default function Leaders() {
           everything the Turing Club does.
         </p>
 
-        {/* leaders grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-5 mb-16 md:mb-20">
-          {LEADERS.map((leader) => (
-            <LeaderCard key={leader.name} {...leader} />
-          ))}
-        </div>
-
-        {/* faculty advisor */}
-        <div className="border-t border-border pt-16">
+        {/* faculty advisor: top of the hierarchy */}
+        <div className="pb-16 border-b border-border mb-16">
           <div className="text-center text-xs font-mono uppercase tracking-widest text-text-dim mb-10">
             Faculty Advisor
           </div>
@@ -159,6 +196,30 @@ export default function Leaders() {
             <div className="text-sm text-text-muted mt-2">
               {FACULTY_ADVISOR.subtitle}
             </div>
+          </div>
+        </div>
+
+        {/* core leadership: President, Vice President, Secretary — featured row */}
+        <div className="mb-16 md:mb-20">
+          <div className="text-center text-xs font-mono uppercase tracking-widest text-text-dim mb-8">
+            Core Leadership
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-6 max-w-3xl mx-auto">
+            {CORE_LEADERS.map((leader) => (
+              <FeaturedLeaderCard key={leader.name} {...leader} />
+            ))}
+          </div>
+        </div>
+
+        {/* remaining leads: standard grid */}
+        <div>
+          <div className="text-center text-xs font-mono uppercase tracking-widest text-text-dim mb-8">
+            Leads
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-5">
+            {LEADS.map((leader) => (
+              <LeaderCard key={leader.name} {...leader} />
+            ))}
           </div>
         </div>
       </div>
