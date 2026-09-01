@@ -34,7 +34,7 @@ export default function NotificationBar() {
   // minimized: small pill, doesn't take up the full strip
   if (status === 'minimized') {
     return (
-      <div className="sticky top-16 z-40 flex justify-end px-5 md:px-10 py-1.5 border-b border-border bg-bg">
+      <div className="sticky top-20 z-40 flex justify-end px-5 md:px-10 py-1.5 border-b border-border bg-bg">
         <button
           onClick={expand}
           className="flex items-center gap-1.5 px-2.5 py-1 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-200 text-[11px] font-mono hover:bg-amber-500/20 transition-colors"
@@ -51,7 +51,7 @@ export default function NotificationBar() {
 
   // expanded: full strip
   return (
-    <div className="sticky top-16 z-40 border-b border-amber-500/30 bg-amber-500/10 backdrop-blur-sm">
+    <div className="sticky top-20 z-40 border-b border-amber-500/30 bg-amber-500/10 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-5 md:px-10 py-2.5 flex items-center gap-3">
         <span className="relative flex h-2 w-2 shrink-0">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75" />

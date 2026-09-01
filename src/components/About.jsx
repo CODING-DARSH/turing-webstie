@@ -56,7 +56,7 @@ export default function About() {
             </h2>
 
             <p className="text-sm md:text-base text-text-muted leading-relaxed mb-5">
-              The Turing Club is a student-run technology community at Jain
+              The Turing Club is a student-run technology community at Jain(Deemed-to-be)
               University, founded in 2021 around a simple idea: the best way
               to learn technology is to build with it, under pressure,
               alongside people who push you.

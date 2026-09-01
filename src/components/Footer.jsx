@@ -55,7 +55,7 @@ export default function Footer() {
               </span>
             </a>
             <p className="text-sm text-text-muted leading-relaxed max-w-xs">
-              Student-run technology community, Jain University. Founded 2021.
+              Student-run technology community, Jain (Deemed-to-be) University. Founded 2021.
             </p>
           </div>
 
