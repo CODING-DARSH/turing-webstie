@@ -1,8 +1,10 @@
+import { Link } from 'react-router-dom';
+
 const EVENT_PHOTOS = [
-  '/src/assets/images/events/hackncrack/photo-1.jpg',
-  '/src/assets/images/events/hackncrack/photo-2.jpg',
-  '/src/assets/images/events/hackncrack/photo-3.jpg',
-  '/src/assets/images/events/hackncrack/photo-4.jpg',
+  '/src/assets/images/events/hackncrack/photo-1.jpeg',
+  '/src/assets/images/events/hackncrack/photo-2.jpeg',
+  '/src/assets/images/events/hackncrack/photo-3.jpeg',
+  '/src/assets/images/events/hackncrack/photo-4.jpeg',
 ];
 
 export default function Events() {
@@ -20,13 +22,13 @@ export default function Events() {
             </h2>
           </div>
 
-          <a
-            href="#"
+          <Link
+            to="/our-work"
             className="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 border border-border hover:border-text-dim transition-colors rounded-md text-sm font-medium text-text-muted whitespace-nowrap"
           >
             See More Events
             <span>&rarr;</span>
-          </a>
+          </Link>
         </div>
 
         {/* featured event: HackNCrack */}
@@ -95,13 +97,13 @@ export default function Events() {
         </div>
 
         {/* mobile: see more events link */}
-        <a
-          href="#"
+        <Link
+          to="/our-work"
           className="sm:hidden mt-6 inline-flex items-center gap-2 px-4 py-2.5 border border-border rounded-md text-sm font-medium text-text-muted"
         >
           See More Events
           <span>&rarr;</span>
-        </a>
+        </Link>
       </div>
     </section>
   );

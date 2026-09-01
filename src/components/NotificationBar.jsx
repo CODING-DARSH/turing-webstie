@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { notification } from '../data/notification';
 
 const MINIMIZED_KEY_PREFIX = 'ttc-notification-minimized:';
@@ -57,19 +58,19 @@ export default function NotificationBar() {
           <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-400" />
         </span>
 
-        <a
-          href={notification.href}
+        <Link
+          to={notification.href}
           className="flex-1 min-w-0 text-xs sm:text-sm font-medium text-amber-200 hover:text-amber-100 transition-colors truncate"
         >
           {notification.message}
-        </a>
+        </Link>
 
-        <a
-          href={notification.href}
+        <Link
+          to={notification.href}
           className="hidden sm:inline text-xs font-mono text-amber-300/80 hover:text-amber-100 transition-colors whitespace-nowrap"
         >
           Learn more &rarr;
-        </a>
+        </Link>
 
         <button
           onClick={minimize}
