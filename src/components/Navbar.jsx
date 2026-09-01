@@ -27,10 +27,10 @@ export default function Navbar() {
   return (
     <>
       <header className="sticky top-0 z-50 border-b border-border bg-bg/80 backdrop-blur-sm">
-        <nav className="max-w-7xl mx-auto px-5 md:px-10 h-16 flex items-center justify-between">
+        <nav className="max-w-7xl mx-auto px-5 md:px-10 h-20 flex items-center justify-between">
           {/* left: logo + name */}
           <Link to="/" className="flex items-center gap-2 sm:gap-3">
-            <img src={logo} alt="The Turing Club logo" className="h-7 w-7 sm:h-8 sm:w-8 object-contain" />
+            <img src={logo} alt="The Turing Club logo" className="h-10 w-10 sm:h-12 sm:w-12 object-contain" />
             <span className="font-semibold text-sm tracking-tight">
               The Turing Club
             </span>

@@ -23,7 +23,7 @@ const CARDS = [
       </svg>
     ),
     title: 'Best Tech Club Award',
-    meta: 'Jain University, 2024',
+    meta: 'Jain (Deemed-to-be) University, 2024',
     desc: 'Recognized as the leading technical community fostering innovation and skill development among students.',
   },
   {
