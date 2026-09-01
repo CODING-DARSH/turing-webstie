@@ -11,7 +11,9 @@ This list is maintained by hand alongside the GitHub [contributors graph](https:
 ## Contributors
 - Krishnapriya ([@krishnapriya-op](https://github.com/krishnapriya-op))
   - Added About Us copy on research support and webinars/seminars ([#5](https://github.com/CODING-DARSH/turing-webstie/pull/5))
-
+- Darsh Vithlani ([@CODING-DARSH](https://github.com/CODING-DARSH))
+  - Added persistent upcoming event notifications and Upcoming Events section ([#3](https://github.com/CODING-DARSH/turing-webstie/pull/3))
+  - Added Our Work section with Events, Workshops, Seminars, and dedicated detail pages ([#7](https://github.com/CODING-DARSH/turing-webstie/pull/7))
 
 <!--
 Add new contributors below this line, following the format above.
