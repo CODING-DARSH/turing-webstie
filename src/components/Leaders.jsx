@@ -115,11 +115,6 @@ function LeaderCard({ name, role, year, image, highlight = false }) {
           className="w-full h-full object-cover"
         />
         {/* designation on top of image */}
-        <div className="absolute top-0 left-0 right-0 px-3 py-2.5 bg-gradient-to-b from-black/90 via-black/50 to-transparent">
-          <span className="text-xs font-bold uppercase tracking-widest text-white drop-shadow-md">
-            {role}
-          </span>
-        </div>
       </div>
       <div className="p-4">
         <div className="text-sm font-semibold text-text leading-tight">{name}</div>
