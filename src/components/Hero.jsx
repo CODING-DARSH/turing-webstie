@@ -60,7 +60,7 @@ export default function Hero() {
               Apply to Join
             </button>
             <a
-              href="#events"
+              href="#upcoming-events"
               className="w-full sm:w-auto px-6 py-3 border border-border hover:border-text-dim transition-colors rounded-md font-semibold text-sm text-center"
             >
               See Upcoming Events
