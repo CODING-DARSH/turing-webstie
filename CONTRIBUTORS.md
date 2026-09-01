@@ -11,6 +11,7 @@ This list is maintained by hand alongside the GitHub [contributors graph](https:
 ## Contributors
 - Krishnapriya ([@krishnapriya-op](https://github.com/krishnapriya-op))
   - Added About Us copy on research support and webinars/seminars ([#5](https://github.com/CODING-DARSH/turing-webstie/pull/5))
+  - Enhanced navbar and logo, updated university branding, and fixed notification bar scrolling ([#9](https://github.com/CODING-DARSH/turing-webstie/pull/9))
 - Darsh Vithlani ([@CODING-DARSH](https://github.com/CODING-DARSH))
   - Added persistent upcoming event notifications and Upcoming Events section ([#3](https://github.com/CODING-DARSH/turing-webstie/pull/3))
   - Added Our Work section with Events, Workshops, Seminars, and dedicated detail pages ([#7](https://github.com/CODING-DARSH/turing-webstie/pull/7))

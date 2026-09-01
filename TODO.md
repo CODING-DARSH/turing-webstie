@@ -6,9 +6,9 @@ Tracking what's fixed vs. what's new to build. Move items to `[x]` once done, an
 
 ## Fixes
 
-- [ ] Make Navbar a bit bigger (height/padding)
-- [ ] Make the club logo in Navbar bigger and more highlighted/prominent
-- [ ] Replace "Jain University" with "Jain (Deemed-to-be-University)" everywhere it appears (Navbar, About, Footer, etc.)
+- [x] Make Navbar a bit bigger (height/padding)
+- [x] Make the club logo in Navbar bigger and more highlighted/prominent
+- [x] Replace "Jain University" with "Jain (Deemed-to-be-University)" everywhere it appears (Navbar, About, Footer, etc.)
 - [x] Update real event photos in the HackNCrack section (replace placeholder image paths)
 - [ ] Update real leader/member images (replace placeholder image paths)
 - [ ] Restructure Leaders section hierarchy:
