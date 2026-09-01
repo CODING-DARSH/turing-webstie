@@ -1,3 +1,11 @@
+import intelliSourcePhoto1 from '../assets/images/events/intellisource-workshop-2025/photo-1.jpeg';
+import intelliSourcePhoto2 from '../assets/images/events/intellisource-workshop-2025/photo-2.jpeg';
+import intelliSourcePhoto3 from '../assets/images/events/intellisource-workshop-2025/photo-3.jpeg';
+
+import promptEngineeringPhoto1 from '../assets/images/events/prompt-engineering-workshop/photo-1.jpeg';
+import promptEngineeringPhoto3 from '../assets/images/events/prompt-engineering-workshop/photo-3.jpeg';
+import promptEngineeringPhoto4 from '../assets/images/events/prompt-engineering-workshop/photo-4.jpeg';
+
 export const WORKSHOPS = [
   {
     slug: 'intellisource-workshop-2025',
@@ -8,9 +16,9 @@ export const WORKSHOPS = [
     description:
       'A joint session with the CyberSmart Club and RedHat experts, covering open-source technologies, enterprise Linux, and cloud-native development through live demos and hands-on technical challenges. Closed with a valedictory session and prizes for top performers.',
     photos: [
-      '/src/assets/images/events/intellisource-workshop-2025/photo-1.jpeg',
-      '/src/assets/images/events/intellisource-workshop-2025/photo-2.jpeg',
-      '/src/assets/images/events/intellisource-workshop-2025/photo-3.jpeg',
+      intelliSourcePhoto1,
+      intelliSourcePhoto2,
+      intelliSourcePhoto3,
     ],
   },
   {
@@ -22,9 +30,9 @@ export const WORKSHOPS = [
     description:
       'A hands-on workshop on prompt engineering led by Thanish C, focused on how to write clearer, more effective prompts to get consistently better output from AI tools — covering practical techniques members could apply immediately in their own work.',
     photos: [
-      '/src/assets/images/events/prompt-engineering-workshop/photo-1.jpeg',
-      '/src/assets/images/events/prompt-engineering-workshop/photo-3.jpeg',
-      '/src/assets/images/events/prompt-engineering-workshop/photo-4.jpeg',
+      promptEngineeringPhoto1,
+      promptEngineeringPhoto3,
+      promptEngineeringPhoto4,
     ],
   },
 ];
