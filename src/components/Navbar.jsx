@@ -1,12 +1,16 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../assets/images/logo.png';
 
+// hrefs are "/#section" so they always route to the home page first,
+// then scroll to the section — works correctly from any page, not just
+// when already on home.
 const NAV_LINKS = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'What We Do', href: '#what-we-do' },
-  { label: 'Events', href: '#events' },
-  { label: 'Leaders', href: '#leaders' },
+  { label: 'Home', href: '/#home' },
+  { label: 'About', href: '/#about' },
+  { label: 'What We Do', href: '/#what-we-do' },
+  { label: 'Events', href: '/#events' },
+  { label: 'Leaders', href: '/#leaders' },
 ];
 
 export default function Navbar() {
@@ -25,23 +29,23 @@ export default function Navbar() {
       <header className="sticky top-0 z-50 border-b border-border bg-bg/80 backdrop-blur-sm">
         <nav className="max-w-7xl mx-auto px-5 md:px-10 h-16 flex items-center justify-between">
           {/* left: logo + name */}
-          <a href="#home" className="flex items-center gap-2 sm:gap-3">
+          <Link to="/" className="flex items-center gap-2 sm:gap-3">
             <img src={logo} alt="The Turing Club logo" className="h-7 w-7 sm:h-8 sm:w-8 object-contain" />
             <span className="font-semibold text-sm tracking-tight">
               The Turing Club
             </span>
-          </a>
+          </Link>
 
           {/* right: nav links (desktop) */}
           <div className="hidden md:flex items-center gap-8">
             {NAV_LINKS.map((link) => (
-              <a
+              <Link
                 key={link.href}
-                href={link.href}
+                to={link.href}
                 className="text-sm text-text-muted hover:text-text transition-colors"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
             <button className="px-4 py-2 bg-primary hover:bg-primary-light transition-colors rounded-md text-sm font-semibold">
               Apply to Join
@@ -91,14 +95,14 @@ export default function Navbar() {
 
         <div className="flex flex-col gap-1 px-5 py-6">
           {NAV_LINKS.map((link) => (
-            <a
+            <Link
               key={link.href}
-              href={link.href}
+              to={link.href}
               className="py-3 text-sm text-text-muted hover:text-text transition-colors border-b border-border/60"
               onClick={() => setOpen(false)}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
           <button className="w-full mt-6 px-4 py-3 bg-primary hover:bg-primary-light transition-colors rounded-md text-sm font-semibold">
             Apply to Join

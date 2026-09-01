@@ -1,28 +1,38 @@
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import NotificationBar from './components/NotificationBar';
-import Hero from './components/Hero';
-import About from './components/About';
-import WhatWeDo from './components/WhatWeDo';
-import Events from './components/Events';
-import UpcomingEvents from './components/UpcomingEvents';
-import Achievements from './components/Achievements';
-import Leaders from './components/Leaders';
 import Footer from './components/Footer';
+import Home from './pages/Home';
+import OurWork from './pages/OurWork';
+import EventDetail from './pages/EventDetail';
+
+function ScrollToTop() {
+  const { pathname, hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) return;
+    window.scrollTo(0, 0);
+  }, [pathname, hash]);
+
+  return null;
+}
 
 function App() {
   return (
-    <div className="bg-bg min-h-screen">
-      <Navbar />
-      <NotificationBar />
-      <Hero />
-      <About />
-      <WhatWeDo />
-      <Events />
-      <UpcomingEvents />
-      <Achievements />
-      <Leaders />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="bg-bg min-h-screen">
+        <Navbar />
+        <NotificationBar />
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/our-work" element={<OurWork />} />
+          <Route path="/our-work/:slug" element={<EventDetail />} />
+        </Routes>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 

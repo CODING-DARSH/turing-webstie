@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const ACTIVITIES = [
   {
     icon: (
@@ -8,8 +10,9 @@ const ACTIVITIES = [
         <path d="M8 9l3 3-3 3" />
       </svg>
     ),
-    title: 'Hackathons',
+    title: 'Events',
     desc: 'Timed, team-based builds judged on real, working output.',
+    tab: 'Events',
   },
   {
     icon: (
@@ -20,6 +23,7 @@ const ACTIVITIES = [
     ),
     title: 'Workshops',
     desc: 'Hands-on sessions teaching real tools and techniques, not slides.',
+    tab: 'Workshops',
   },
   {
     icon: (
@@ -37,13 +41,16 @@ const ACTIVITIES = [
   {
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-5 h-5">
-        <circle cx="12" cy="8" r="4" />
-        <path d="M4 21c0-4 3.5-7 8-7s8 3 8 7" />
-        <path d="M17 8l2 2 3-3" />
+        <rect x="3" y="4" width="18" height="12" rx="1" />
+        <path d="M8 20h8" />
+        <path d="M12 16v4" />
+        <path d="M7 9l3 2-3 2" />
+        <path d="M13 13h4" />
       </svg>
     ),
-    title: 'Recruitment Drives',
-    desc: "Open calls for new members to join and start building with us.",
+    title: 'Seminars',
+    desc: 'Expert-led sessions bringing industry knowledge directly to students.',
+    tab: 'Seminars',
   },
 ];
 
@@ -72,12 +79,24 @@ export default function WhatWeDo() {
           {ACTIVITIES.map((item) => (
             <div
               key={item.title}
-              className="p-4 md:p-5 border border-border rounded-lg bg-surface/60 hover:border-text-dim transition-colors"
+              className="relative p-4 md:p-5 border border-border rounded-lg bg-surface/60 hover:border-text-dim transition-colors"
             >
+              {item.tab && (
+                <Link
+                  to={`/our-work?tab=${item.tab}`}
+                  aria-label={`See more ${item.tab}`}
+                  title={`See more ${item.tab}`}
+                  className="absolute top-3 right-3 md:top-4 md:right-4 w-6 h-6 rounded-full border border-border flex items-center justify-center text-text-dim hover:text-primary-light hover:border-primary-light/50 transition-colors"
+                >
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-3 h-3">
+                    <path d="M7 17L17 7M17 7H8M17 7v9" />
+                  </svg>
+                </Link>
+              )}
               <div className="w-8 h-8 md:w-9 md:h-9 rounded-md border border-border flex items-center justify-center text-primary-light mb-3 md:mb-4">
                 {item.icon}
               </div>
-              <div className="text-xs md:text-sm font-semibold text-text mb-1 md:mb-1.5">
+              <div className="text-xs md:text-sm font-semibold text-text mb-1 md:mb-1.5 pr-4">
                 {item.title}
               </div>
               <div className="text-[11px] md:text-sm text-text-muted leading-relaxed">
