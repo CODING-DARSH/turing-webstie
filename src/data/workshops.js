@@ -6,6 +6,10 @@ import promptEngineeringPhoto1 from '../assets/images/events/prompt-engineering-
 import promptEngineeringPhoto3 from '../assets/images/events/prompt-engineering-workshop/photo-3.jpeg';
 import promptEngineeringPhoto4 from '../assets/images/events/prompt-engineering-workshop/photo-4.jpeg';
 
+import aiCyberSecurityPhoto1 from '../assets/images/events/ai-in-cyber-security/photo-1.jpeg';
+import aiCyberSecurityPhoto2 from '../assets/images/events/ai-in-cyber-security/photo-2.jpeg';
+import aiCyberSecurityPhoto3 from '../assets/images/events/ai-in-cyber-security/photo-3.jpeg';
+
 export const WORKSHOPS = [
   {
     slug: 'intellisource-workshop-2025',
@@ -33,6 +37,20 @@ export const WORKSHOPS = [
       promptEngineeringPhoto1,
       promptEngineeringPhoto3,
       promptEngineeringPhoto4,
+    ],
+  },
+  {
+    slug: 'ai-in-cyber-security',
+    category: 'Workshops',
+    title: 'AI in Cyber Security: Defending the Digital Frontier',
+    meta: 'Workshop',
+    date: 'April 29, 2025',
+    description:
+      'A session by Rashtra Shourya, Lead InfoSec and BISO at GIT, in association with ISAC, on how AI is transforming cybersecurity through real-time threat detection and machine-learning-driven anomaly detection. Covered real-world case studies on AI-driven threat mitigation and wrapped up with an interactive quiz for the 100+ students who attended.',
+    photos: [
+      aiCyberSecurityPhoto1,
+      aiCyberSecurityPhoto2,
+      aiCyberSecurityPhoto3,
     ],
   },
 ];
